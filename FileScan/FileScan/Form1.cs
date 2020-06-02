@@ -195,5 +195,15 @@ namespace FileScan
             }
             
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
