@@ -159,13 +159,41 @@ namespace FileScan
                 };
 
                 pieChart1.Series = piechartData;
-
+                CommunityVotesChart(scanResults.Data.Attributes.TotalVotes.Harmless, scanResults.Data.Attributes.TotalVotes.Malicious);
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+
+        public void CommunityVotesChart(long safeCount, long maliciousCount)
+        {
+            chart1.Series.Clear();
+            chart1.Series.Add("Safe");
+            chart1.Series["Safe"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            chart1.Series.Add("Malicious");
+            chart1.Series["Malicious"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+
+            chart1.Series["Safe"].Color = Color.MediumBlue;
+            chart1.Series["Malicious"].Color = Color.Maroon;
+
+            if(safeCount < 1 && maliciousCount < 1)
+            {
+                chart1.Series.Clear();
+                chart1.Series.Add("No Votes Found");
+                chart1.Series["No Votes Found"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+                chart1.Series["No Votes Found"].Color = System.Drawing.Color.Gray;
+                chart1.Series["No Votes Found"].Points.AddXY("No Votes Found", 1);
+            }
+            else
+            {
+                chart1.Series["Safe"].Points.AddXY("Safe", safeCount);
+                chart1.Series["Malicious"].Points.AddXY("Malicious", maliciousCount);
+            }
+            
         }
     }
 }

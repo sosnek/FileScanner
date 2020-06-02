@@ -19,3 +19,24 @@ C:\Users\Asosnowski1197\source\repos\FileScan\FileScan\bin\Debug\LiveCharts.WinF
 C:\Users\Asosnowski1197\source\repos\FileScan\FileScan\bin\Debug\LiveCharts.WinForms.xml
 C:\Users\Asosnowski1197\source\repos\FileScan\FileScan\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\Asosnowski1197\source\repos\FileScan\FileScan\bin\Debug\LiveCharts.Wpf.xml
+E:\GitHub Repos\FileScanner\FileScan\FileScan\bin\Debug\FileScan.exe.config
+E:\GitHub Repos\FileScanner\FileScan\FileScan\bin\Debug\FileScan.exe
+E:\GitHub Repos\FileScanner\FileScan\FileScan\bin\Debug\FileScan.pdb
+E:\GitHub Repos\FileScanner\FileScan\FileScan\bin\Debug\LiveCharts.dll
+E:\GitHub Repos\FileScanner\FileScan\FileScan\bin\Debug\LiveCharts.WinForms.dll
+E:\GitHub Repos\FileScanner\FileScan\FileScan\bin\Debug\LiveCharts.Wpf.dll
+E:\GitHub Repos\FileScanner\FileScan\FileScan\bin\Debug\Newtonsoft.Json.dll
+E:\GitHub Repos\FileScanner\FileScan\FileScan\bin\Debug\LiveCharts.pdb
+E:\GitHub Repos\FileScanner\FileScan\FileScan\bin\Debug\LiveCharts.xml
+E:\GitHub Repos\FileScanner\FileScan\FileScan\bin\Debug\LiveCharts.WinForms.pdb
+E:\GitHub Repos\FileScanner\FileScan\FileScan\bin\Debug\LiveCharts.WinForms.xml
+E:\GitHub Repos\FileScanner\FileScan\FileScan\bin\Debug\LiveCharts.Wpf.pdb
+E:\GitHub Repos\FileScanner\FileScan\FileScan\bin\Debug\LiveCharts.Wpf.xml
+E:\GitHub Repos\FileScanner\FileScan\FileScan\bin\Debug\Newtonsoft.Json.xml
+E:\GitHub Repos\FileScanner\FileScan\FileScan\obj\Debug\FileScan.csprojAssemblyReference.cache
+E:\GitHub Repos\FileScanner\FileScan\FileScan\obj\Debug\FileScan.Form1.resources
+E:\GitHub Repos\FileScanner\FileScan\FileScan\obj\Debug\FileScan.Properties.Resources.resources
+E:\GitHub Repos\FileScanner\FileScan\FileScan\obj\Debug\FileScan.csproj.GenerateResource.cache
+E:\GitHub Repos\FileScanner\FileScan\FileScan\obj\Debug\FileScan.csproj.CopyComplete
+E:\GitHub Repos\FileScanner\FileScan\FileScan\obj\Debug\FileScan.exe
+E:\GitHub Repos\FileScanner\FileScan\FileScan\obj\Debug\FileScan.pdb

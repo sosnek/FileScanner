@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.filePath_textbox = new System.Windows.Forms.TextBox();
-            this.API_Key_Warning_Label = new System.Windows.Forms.Label();
             this.scan_button = new System.Windows.Forms.Button();
-            this.APIKey_textbox = new System.Windows.Forms.TextBox();
-            this.File_Path_Label_Warning = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -54,7 +53,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.MD5_textbox = new System.Windows.Forms.TextBox();
             this.SHA1_textbox = new System.Windows.Forms.TextBox();
             this.SHA256_textbox = new System.Windows.Forms.TextBox();
@@ -73,13 +71,20 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
+            this.API_Key_Warning_Label = new System.Windows.Forms.Label();
+            this.APIKey_textbox = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.File_Path_Label_Warning = new System.Windows.Forms.Label();
+            this.filePath_textbox = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -87,9 +92,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -112,89 +120,34 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "FileScan";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(222, 161);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // filePath_textbox
-            // 
-            this.filePath_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.filePath_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.filePath_textbox.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filePath_textbox.ForeColor = System.Drawing.SystemColors.Window;
-            this.filePath_textbox.Location = new System.Drawing.Point(258, 173);
-            this.filePath_textbox.Name = "filePath_textbox";
-            this.filePath_textbox.Size = new System.Drawing.Size(660, 14);
-            this.filePath_textbox.TabIndex = 4;
-            this.filePath_textbox.Text = "File Path";
-            // 
-            // API_Key_Warning_Label
-            // 
-            this.API_Key_Warning_Label.AutoSize = true;
-            this.API_Key_Warning_Label.ForeColor = System.Drawing.Color.Firebrick;
-            this.API_Key_Warning_Label.Location = new System.Drawing.Point(258, 236);
-            this.API_Key_Warning_Label.Name = "API_Key_Warning_Label";
-            this.API_Key_Warning_Label.Size = new System.Drawing.Size(121, 13);
-            this.API_Key_Warning_Label.TabIndex = 11;
-            this.API_Key_Warning_Label.Text = "API Key format incorrect";
-            this.API_Key_Warning_Label.Visible = false;
-            // 
             // scan_button
             // 
-            this.scan_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.scan_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.scan_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.scan_button.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scan_button.ForeColor = System.Drawing.Color.White;
-            this.scan_button.Location = new System.Drawing.Point(896, 547);
+            this.scan_button.Location = new System.Drawing.Point(728, 97);
             this.scan_button.Name = "scan_button";
-            this.scan_button.Size = new System.Drawing.Size(184, 48);
+            this.scan_button.Size = new System.Drawing.Size(136, 48);
             this.scan_button.TabIndex = 10;
             this.scan_button.Text = "Scan File";
             this.scan_button.UseVisualStyleBackColor = false;
             this.scan_button.Click += new System.EventHandler(this.scan_button_Click);
             // 
-            // APIKey_textbox
-            // 
-            this.APIKey_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.APIKey_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.APIKey_textbox.ForeColor = System.Drawing.SystemColors.Window;
-            this.APIKey_textbox.Location = new System.Drawing.Point(258, 220);
-            this.APIKey_textbox.Name = "APIKey_textbox";
-            this.APIKey_textbox.Size = new System.Drawing.Size(660, 13);
-            this.APIKey_textbox.TabIndex = 5;
-            this.APIKey_textbox.Text = "API Key";
-            // 
-            // File_Path_Label_Warning
-            // 
-            this.File_Path_Label_Warning.AutoSize = true;
-            this.File_Path_Label_Warning.ForeColor = System.Drawing.Color.Firebrick;
-            this.File_Path_Label_Warning.Location = new System.Drawing.Point(258, 189);
-            this.File_Path_Label_Warning.Name = "File_Path_Label_Warning";
-            this.File_Path_Label_Warning.Size = new System.Drawing.Size(129, 13);
-            this.File_Path_Label_Warning.TabIndex = 12;
-            this.File_Path_Label_Warning.Text = "File path cannot be empty";
-            this.File_Path_Label_Warning.Visible = false;
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(50)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1137, 66);
+            this.panel1.Size = new System.Drawing.Size(1114, 66);
             this.panel1.TabIndex = 13;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.flowLayoutPanel9);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
@@ -203,16 +156,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 66);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 575);
+            this.panel2.Size = new System.Drawing.Size(200, 589);
             this.panel2.TabIndex = 14;
-            // 
-            // flowLayoutPanel9
-            // 
-            this.flowLayoutPanel9.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(199, 0);
-            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(1, 575);
-            this.flowLayoutPanel9.TabIndex = 31;
             // 
             // button5
             // 
@@ -290,6 +235,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label9);
@@ -298,9 +244,10 @@
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.pieChart1);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.panel3.Location = new System.Drawing.Point(674, 257);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(391, 249);
+            this.panel3.Size = new System.Drawing.Size(416, 255);
             this.panel3.TabIndex = 18;
             // 
             // label7
@@ -374,17 +321,9 @@
             this.pictureBox3.TabIndex = 18;
             this.pictureBox3.TabStop = false;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(258, 185);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(660, 1);
-            this.flowLayoutPanel1.TabIndex = 19;
-            // 
             // MD5_textbox
             // 
-            this.MD5_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(50)))));
+            this.MD5_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.MD5_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MD5_textbox.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MD5_textbox.ForeColor = System.Drawing.SystemColors.Control;
@@ -396,7 +335,7 @@
             // 
             // SHA1_textbox
             // 
-            this.SHA1_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(50)))));
+            this.SHA1_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.SHA1_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SHA1_textbox.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SHA1_textbox.ForeColor = System.Drawing.SystemColors.Control;
@@ -408,7 +347,7 @@
             // 
             // SHA256_textbox
             // 
-            this.SHA256_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(50)))));
+            this.SHA256_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.SHA256_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SHA256_textbox.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SHA256_textbox.ForeColor = System.Drawing.SystemColors.Control;
@@ -453,7 +392,7 @@
             // 
             // fileSize_textBox
             // 
-            this.fileSize_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(50)))));
+            this.fileSize_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.fileSize_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fileSize_textBox.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileSize_textBox.ForeColor = System.Drawing.SystemColors.Control;
@@ -465,7 +404,7 @@
             // 
             // fileName_textbox
             // 
-            this.fileName_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(50)))));
+            this.fileName_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.fileName_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fileName_textbox.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileName_textbox.ForeColor = System.Drawing.SystemColors.Control;
@@ -539,7 +478,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(50)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.flowLayoutPanel2);
             this.panel4.Controls.Add(this.label6);
@@ -557,9 +496,9 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.fileSize_textBox);
             this.panel4.Controls.Add(this.fileName_textbox);
-            this.panel4.Location = new System.Drawing.Point(222, 271);
+            this.panel4.Location = new System.Drawing.Point(223, 257);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(397, 255);
+            this.panel4.Size = new System.Drawing.Size(421, 255);
             this.panel4.TabIndex = 26;
             // 
             // label11
@@ -581,81 +520,192 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(260, 1);
             this.flowLayoutPanel2.TabIndex = 26;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(50)))));
-            this.panel5.Controls.Add(this.panel3);
-            this.panel5.Location = new System.Drawing.Point(689, 271);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(397, 255);
-            this.panel5.TabIndex = 27;
-            // 
-            // flowLayoutPanel8
-            // 
-            this.flowLayoutPanel8.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel8.Location = new System.Drawing.Point(258, 232);
-            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(660, 1);
-            this.flowLayoutPanel8.TabIndex = 28;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(222, 210);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.TabIndex = 29;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(222, 73);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(161, 25);
-            this.label12.TabIndex = 30;
-            this.label12.Text = "Scan Your File";
-            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(1086, 66);
+            this.pictureBox7.Location = new System.Drawing.Point(816, 0);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(51, 53);
             this.pictureBox7.TabIndex = 31;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Visible = false;
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Controls.Add(this.pictureBox6);
+            this.panel6.Controls.Add(this.scan_button);
+            this.panel6.Controls.Add(this.pictureBox7);
+            this.panel6.Controls.Add(this.flowLayoutPanel8);
+            this.panel6.Controls.Add(this.API_Key_Warning_Label);
+            this.panel6.Controls.Add(this.APIKey_textbox);
+            this.panel6.Controls.Add(this.flowLayoutPanel1);
+            this.panel6.Controls.Add(this.File_Path_Label_Warning);
+            this.panel6.Controls.Add(this.filePath_textbox);
+            this.panel6.Controls.Add(this.pictureBox2);
+            this.panel6.Location = new System.Drawing.Point(223, 86);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(867, 151);
+            this.panel6.TabIndex = 32;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(13, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(161, 25);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Scan Your File";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(18, 106);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox6.TabIndex = 38;
+            this.pictureBox6.TabStop = false;
+            // 
+            // flowLayoutPanel8
+            // 
+            this.flowLayoutPanel8.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(54, 128);
+            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(600, 1);
+            this.flowLayoutPanel8.TabIndex = 37;
+            // 
+            // API_Key_Warning_Label
+            // 
+            this.API_Key_Warning_Label.AutoSize = true;
+            this.API_Key_Warning_Label.ForeColor = System.Drawing.Color.Firebrick;
+            this.API_Key_Warning_Label.Location = new System.Drawing.Point(54, 132);
+            this.API_Key_Warning_Label.Name = "API_Key_Warning_Label";
+            this.API_Key_Warning_Label.Size = new System.Drawing.Size(121, 13);
+            this.API_Key_Warning_Label.TabIndex = 34;
+            this.API_Key_Warning_Label.Text = "API Key format incorrect";
+            this.API_Key_Warning_Label.Visible = false;
+            // 
+            // APIKey_textbox
+            // 
+            this.APIKey_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.APIKey_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.APIKey_textbox.ForeColor = System.Drawing.SystemColors.Window;
+            this.APIKey_textbox.Location = new System.Drawing.Point(54, 116);
+            this.APIKey_textbox.Name = "APIKey_textbox";
+            this.APIKey_textbox.Size = new System.Drawing.Size(600, 13);
+            this.APIKey_textbox.TabIndex = 33;
+            this.APIKey_textbox.Text = "API Key";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(54, 81);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(600, 1);
+            this.flowLayoutPanel1.TabIndex = 36;
+            // 
+            // File_Path_Label_Warning
+            // 
+            this.File_Path_Label_Warning.AutoSize = true;
+            this.File_Path_Label_Warning.ForeColor = System.Drawing.Color.Firebrick;
+            this.File_Path_Label_Warning.Location = new System.Drawing.Point(54, 85);
+            this.File_Path_Label_Warning.Name = "File_Path_Label_Warning";
+            this.File_Path_Label_Warning.Size = new System.Drawing.Size(129, 13);
+            this.File_Path_Label_Warning.TabIndex = 35;
+            this.File_Path_Label_Warning.Text = "File path cannot be empty";
+            this.File_Path_Label_Warning.Visible = false;
+            // 
+            // filePath_textbox
+            // 
+            this.filePath_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.filePath_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.filePath_textbox.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filePath_textbox.ForeColor = System.Drawing.SystemColors.Window;
+            this.filePath_textbox.Location = new System.Drawing.Point(54, 69);
+            this.filePath_textbox.Name = "filePath_textbox";
+            this.filePath_textbox.Size = new System.Drawing.Size(600, 14);
+            this.filePath_textbox.TabIndex = 32;
+            this.filePath_textbox.Text = "File Path";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(18, 57);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.TabIndex = 31;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.panel5.Controls.Add(this.chart1);
+            this.panel5.Location = new System.Drawing.Point(223, 533);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(867, 104);
+            this.panel5.TabIndex = 33;
+            // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            this.chart1.BorderlineColor = System.Drawing.Color.Transparent;
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            chartArea1.BorderColor = System.Drawing.Color.White;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            legend1.ForeColor = System.Drawing.Color.White;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(3, 0);
+            this.chart1.Name = "chart1";
+            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series1.LabelBackColor = System.Drawing.Color.White;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            series1.Name = "Safe";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            series2.Legend = "Legend1";
+            series2.Name = "Malicious";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(836, 101);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            title1.ForeColor = System.Drawing.Color.White;
+            title1.Name = "Title1";
+            title1.Text = "Community Votes";
+            this.chart1.Titles.Add(title1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(1137, 641);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.flowLayoutPanel8);
-            this.Controls.Add(this.API_Key_Warning_Label);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(18)))));
+            this.ClientSize = new System.Drawing.Size(1114, 655);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.scan_button);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.APIKey_textbox);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.File_Path_Label_Warning);
-            this.Controls.Add(this.filePath_textbox);
-            this.Controls.Add(this.pictureBox2);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FileScan";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -666,11 +716,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -678,12 +731,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox filePath_textbox;
-        private System.Windows.Forms.TextBox APIKey_textbox;
         private System.Windows.Forms.Button scan_button;
-        private System.Windows.Forms.Label API_Key_Warning_Label;
-        private System.Windows.Forms.Label File_Path_Label_Warning;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button4;
@@ -699,7 +747,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TextBox MD5_textbox;
         private System.Windows.Forms.TextBox SHA1_textbox;
         private System.Windows.Forms.TextBox SHA256_textbox;
@@ -719,12 +766,19 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
+        private System.Windows.Forms.Label API_Key_Warning_Label;
+        private System.Windows.Forms.TextBox APIKey_textbox;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label File_Path_Label_Warning;
+        private System.Windows.Forms.TextBox filePath_textbox;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 
