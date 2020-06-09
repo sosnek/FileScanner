@@ -190,8 +190,9 @@ namespace FileScan
             }
             else
             {
-                chart1.Series["Safe"].Points.AddXY("Safe", safeCount);
-                chart1.Series["Malicious"].Points.AddXY("Malicious", maliciousCount);
+                chart1.Series["Safe"].Points.AddXY("2", safeCount);
+                chart1.Series["Malicious"].Points.Add(0);
+                chart1.Series["Malicious"].Points.AddXY("1", maliciousCount);
             }
             
         }
