@@ -1,3 +1,1 @@
-I know, I should have used WPF
-
-//In progress..
+// Filescanner utilizes the virus total API to retrieve virus scan analytics using REST api calls.
