@@ -29,23 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.scan_button = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.minimize_label = new System.Windows.Forms.Label();
             this.exit_label = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -88,7 +82,6 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -128,7 +121,7 @@
             this.scan_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.scan_button.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scan_button.ForeColor = System.Drawing.Color.White;
-            this.scan_button.Location = new System.Drawing.Point(728, 97);
+            this.scan_button.Location = new System.Drawing.Point(941, 97);
             this.scan_button.Name = "scan_button";
             this.scan_button.Size = new System.Drawing.Size(136, 48);
             this.scan_button.TabIndex = 10;
@@ -146,7 +139,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1114, 66);
+            this.panel1.Size = new System.Drawing.Size(1125, 66);
             this.panel1.TabIndex = 13;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             // 
@@ -155,7 +148,7 @@
             this.minimize_label.AutoSize = true;
             this.minimize_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimize_label.ForeColor = System.Drawing.Color.Silver;
-            this.minimize_label.Location = new System.Drawing.Point(1034, 9);
+            this.minimize_label.Location = new System.Drawing.Point(1045, 9);
             this.minimize_label.Name = "minimize_label";
             this.minimize_label.Size = new System.Drawing.Size(27, 25);
             this.minimize_label.TabIndex = 4;
@@ -169,7 +162,7 @@
             this.exit_label.AutoSize = true;
             this.exit_label.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit_label.ForeColor = System.Drawing.Color.Silver;
-            this.exit_label.Location = new System.Drawing.Point(1076, 9);
+            this.exit_label.Location = new System.Drawing.Point(1087, 9);
             this.exit_label.Name = "exit_label";
             this.exit_label.Size = new System.Drawing.Size(27, 25);
             this.exit_label.TabIndex = 3;
@@ -178,91 +171,11 @@
             this.exit_label.MouseLeave += new System.EventHandler(this.mouse_Leave);
             this.exit_label.MouseHover += new System.EventHandler(this.mouse_Hover);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 66);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 589);
-            this.panel2.TabIndex = 14;
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.AliceBlue;
-            this.button5.Location = new System.Drawing.Point(3, 192);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(194, 91);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "History";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.AliceBlue;
-            this.button4.Location = new System.Drawing.Point(3, 481);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(194, 91);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Exit";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.AliceBlue;
-            this.button3.Location = new System.Drawing.Point(3, 304);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(194, 91);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "About";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.AliceBlue;
-            this.button2.Location = new System.Drawing.Point(3, 95);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 91);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "More Data";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.AliceBlue;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 91);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Dashboard";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // pieChart1
             // 
-            this.pieChart1.Location = new System.Drawing.Point(153, 7);
+            this.pieChart1.Location = new System.Drawing.Point(177, 3);
             this.pieChart1.Name = "pieChart1";
-            this.pieChart1.Size = new System.Drawing.Size(235, 239);
+            this.pieChart1.Size = new System.Drawing.Size(320, 239);
             this.pieChart1.TabIndex = 17;
             this.pieChart1.Text = "pieChart1";
             // 
@@ -278,9 +191,9 @@
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.pieChart1);
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            this.panel3.Location = new System.Drawing.Point(674, 257);
+            this.panel3.Location = new System.Drawing.Point(575, 253);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(416, 255);
+            this.panel3.Size = new System.Drawing.Size(528, 255);
             this.panel3.TabIndex = 18;
             // 
             // label7
@@ -363,7 +276,7 @@
             this.MD5_textbox.Location = new System.Drawing.Point(94, 105);
             this.MD5_textbox.Name = "MD5_textbox";
             this.MD5_textbox.ReadOnly = true;
-            this.MD5_textbox.Size = new System.Drawing.Size(251, 14);
+            this.MD5_textbox.Size = new System.Drawing.Size(350, 14);
             this.MD5_textbox.TabIndex = 5;
             // 
             // SHA1_textbox
@@ -375,7 +288,7 @@
             this.SHA1_textbox.Location = new System.Drawing.Point(94, 134);
             this.SHA1_textbox.Name = "SHA1_textbox";
             this.SHA1_textbox.ReadOnly = true;
-            this.SHA1_textbox.Size = new System.Drawing.Size(251, 14);
+            this.SHA1_textbox.Size = new System.Drawing.Size(350, 14);
             this.SHA1_textbox.TabIndex = 6;
             // 
             // SHA256_textbox
@@ -387,7 +300,7 @@
             this.SHA256_textbox.Location = new System.Drawing.Point(93, 165);
             this.SHA256_textbox.Name = "SHA256_textbox";
             this.SHA256_textbox.ReadOnly = true;
-            this.SHA256_textbox.Size = new System.Drawing.Size(251, 14);
+            this.SHA256_textbox.Size = new System.Drawing.Size(350, 14);
             this.SHA256_textbox.TabIndex = 7;
             // 
             // label2
@@ -432,7 +345,7 @@
             this.fileSize_textBox.Location = new System.Drawing.Point(93, 195);
             this.fileSize_textBox.Name = "fileSize_textBox";
             this.fileSize_textBox.ReadOnly = true;
-            this.fileSize_textBox.Size = new System.Drawing.Size(251, 14);
+            this.fileSize_textBox.Size = new System.Drawing.Size(350, 14);
             this.fileSize_textBox.TabIndex = 11;
             // 
             // fileName_textbox
@@ -444,7 +357,8 @@
             this.fileName_textbox.Location = new System.Drawing.Point(93, 77);
             this.fileName_textbox.Name = "fileName_textbox";
             this.fileName_textbox.ReadOnly = true;
-            this.fileName_textbox.Size = new System.Drawing.Size(251, 14);
+            this.fileName_textbox.ShortcutsEnabled = false;
+            this.fileName_textbox.Size = new System.Drawing.Size(350, 14);
             this.fileName_textbox.TabIndex = 13;
             // 
             // label5
@@ -474,7 +388,7 @@
             this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(93, 92);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(260, 1);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(350, 1);
             this.flowLayoutPanel3.TabIndex = 21;
             // 
             // flowLayoutPanel4
@@ -482,7 +396,7 @@
             this.flowLayoutPanel4.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(94, 119);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(260, 1);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(350, 1);
             this.flowLayoutPanel4.TabIndex = 22;
             // 
             // flowLayoutPanel5
@@ -498,7 +412,7 @@
             this.flowLayoutPanel6.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(94, 177);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(260, 1);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(350, 1);
             this.flowLayoutPanel6.TabIndex = 24;
             // 
             // flowLayoutPanel7
@@ -506,7 +420,7 @@
             this.flowLayoutPanel7.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel7.Location = new System.Drawing.Point(93, 207);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(260, 1);
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(350, 1);
             this.flowLayoutPanel7.TabIndex = 25;
             // 
             // panel4
@@ -529,9 +443,9 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.fileSize_textBox);
             this.panel4.Controls.Add(this.fileName_textbox);
-            this.panel4.Location = new System.Drawing.Point(223, 257);
+            this.panel4.Location = new System.Drawing.Point(22, 253);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(421, 255);
+            this.panel4.Size = new System.Drawing.Size(532, 255);
             this.panel4.TabIndex = 26;
             // 
             // label11
@@ -550,13 +464,13 @@
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(94, 147);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(260, 1);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(350, 1);
             this.flowLayoutPanel2.TabIndex = 26;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(816, 0);
+            this.pictureBox7.Location = new System.Drawing.Point(1029, 0);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(51, 53);
             this.pictureBox7.TabIndex = 31;
@@ -577,9 +491,9 @@
             this.panel6.Controls.Add(this.File_Path_Label_Warning);
             this.panel6.Controls.Add(this.filePath_textbox);
             this.panel6.Controls.Add(this.pictureBox2);
-            this.panel6.Location = new System.Drawing.Point(223, 86);
+            this.panel6.Location = new System.Drawing.Point(22, 82);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(867, 151);
+            this.panel6.Size = new System.Drawing.Size(1080, 151);
             this.panel6.TabIndex = 32;
             // 
             // label12
@@ -607,7 +521,7 @@
             this.flowLayoutPanel8.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel8.Location = new System.Drawing.Point(54, 128);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(600, 1);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(814, 1);
             this.flowLayoutPanel8.TabIndex = 37;
             // 
             // API_Key_Warning_Label
@@ -628,7 +542,7 @@
             this.APIKey_textbox.ForeColor = System.Drawing.SystemColors.Window;
             this.APIKey_textbox.Location = new System.Drawing.Point(54, 116);
             this.APIKey_textbox.Name = "APIKey_textbox";
-            this.APIKey_textbox.Size = new System.Drawing.Size(600, 13);
+            this.APIKey_textbox.Size = new System.Drawing.Size(814, 13);
             this.APIKey_textbox.TabIndex = 33;
             this.APIKey_textbox.Text = "API Key";
             // 
@@ -637,7 +551,7 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(54, 81);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(600, 1);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(814, 1);
             this.flowLayoutPanel1.TabIndex = 36;
             // 
             // File_Path_Label_Warning
@@ -659,7 +573,7 @@
             this.filePath_textbox.ForeColor = System.Drawing.SystemColors.Window;
             this.filePath_textbox.Location = new System.Drawing.Point(54, 69);
             this.filePath_textbox.Name = "filePath_textbox";
-            this.filePath_textbox.Size = new System.Drawing.Size(600, 14);
+            this.filePath_textbox.Size = new System.Drawing.Size(814, 14);
             this.filePath_textbox.TabIndex = 32;
             this.filePath_textbox.Text = "File Path";
             // 
@@ -677,81 +591,80 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.panel5.Controls.Add(this.chart1);
-            this.panel5.Location = new System.Drawing.Point(223, 533);
+            this.panel5.Location = new System.Drawing.Point(22, 529);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(867, 104);
+            this.panel5.Size = new System.Drawing.Size(1080, 104);
             this.panel5.TabIndex = 33;
             // 
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
             this.chart1.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisX.MinorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX2.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX2.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX2.TitleForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY2.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY2.TitleForeColor = System.Drawing.Color.White;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            chartArea1.BorderColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            legend1.ForeColor = System.Drawing.Color.White;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX.MinorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisX.MinorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX.TitleForeColor = System.Drawing.Color.White;
+            chartArea2.AxisX2.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisX2.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX2.TitleForeColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisY.TitleForeColor = System.Drawing.Color.White;
+            chartArea2.AxisY2.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY2.TitleForeColor = System.Drawing.Color.White;
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            chartArea2.BorderColor = System.Drawing.Color.White;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            legend2.ForeColor = System.Drawing.Color.White;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(3, 0);
             this.chart1.Name = "chart1";
-            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            series1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.LabelBackColor = System.Drawing.Color.White;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
-            series1.Name = "Safe";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            series2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.Legend = "Legend1";
-            series2.Name = "Malicious";
-            series2.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(861, 101);
+            series3.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            series3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series3.LabelBackColor = System.Drawing.Color.White;
+            series3.LabelForeColor = System.Drawing.Color.White;
+            series3.Legend = "Legend1";
+            series3.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(30)))));
+            series3.Name = "Safe";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            series4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series4.Legend = "Legend1";
+            series4.Name = "Malicious";
+            series4.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
+            this.chart1.Size = new System.Drawing.Size(1074, 101);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.ForeColor = System.Drawing.Color.White;
-            title1.Name = "Title1";
-            title1.Text = "Community Votes";
-            this.chart1.Titles.Add(title1);
+            title2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.ForeColor = System.Drawing.Color.White;
+            title2.Name = "Title1";
+            title2.Text = "Community Votes";
+            this.chart1.Titles.Add(title2);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(19)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(1114, 655);
+            this.ClientSize = new System.Drawing.Size(1125, 655);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -762,7 +675,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -787,13 +699,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button scan_button;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private LiveCharts.WinForms.PieChart pieChart1;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
