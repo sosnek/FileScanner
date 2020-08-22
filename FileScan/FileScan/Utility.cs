@@ -9,6 +9,12 @@ namespace FileScan
 {
     class Utility
     {
+
+        /// <summary>
+        /// Determines the MD5 Hash of the file
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns></returns>
         public static string CalculateMD5(string file)
         {
             using (var md5 = MD5.Create())
@@ -28,7 +34,11 @@ namespace FileScan
             }
         }
 
-
+        /// <summary>
+        /// Determines the SHA1 hash of the file
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns></returns>
         public static string CalculateSHA1(string file)
         {
             using (var stream = File.OpenRead(file))
@@ -47,7 +57,11 @@ namespace FileScan
             }
         }
 
-
+        /// <summary>
+        /// Determines the SHA256 hash of the file
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns></returns>
         public static string CalculateSHA256(string file)
         {
             using (var stream = File.OpenRead(file))
@@ -66,7 +80,11 @@ namespace FileScan
             }
         }
 
-
+        /// <summary>
+        /// Calculates the file size in byte(s)
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns></returns>
         public static long CalculateFileSize(string file)
         {
             using (var stream = File.OpenRead(file))

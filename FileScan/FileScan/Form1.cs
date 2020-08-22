@@ -43,6 +43,7 @@ namespace FileScan
                     FileInfo.FileInfoInstance.File_Path = filePath.ToString();
                     FileInfo.FileInfoInstance.File_Name = openFileDialog.SafeFileName;
 
+                    //Get all the file information
                     fileName_textbox.Text = FileInfo.FileInfoInstance.File_Name;
                     MD5_textbox.Text = Utility.CalculateMD5(filePath);
                     SHA1_textbox.Text = Utility.CalculateSHA1(filePath);
@@ -80,7 +81,10 @@ namespace FileScan
             pictureBox7.Visible = false;
         }
 
-
+        /// <summary>
+        /// Async method to create an HTTPPost request to scan the file the user selected. Scan results are filtered and saved
+        /// </summary>
+        /// <returns></returns>
         private async Task GetScanResultsAsync()
         {
             ScanResults scanResults = null;
@@ -94,7 +98,7 @@ namespace FileScan
                 }
                 else
                 {
-                    // if results are still empty, wait 10 seconds and request them again
+                    // if results are still not of expected size, wait 10 seconds and request them again
                     await Task.Delay(10000);
                 }
             } while (true);
@@ -106,7 +110,7 @@ namespace FileScan
             {
                 foreach (KeyValuePair<string, LastAnalysisResult> entry in scanResults.Data.Attributes.LastAnalysisResults)
                 {
-                    // do something with entry.Value or entry.Key
+                    // categorize the outcome of the scan result
                     if ((int)entry.Value.Category == 0)
                     {
                         malicious++;
@@ -163,12 +167,22 @@ namespace FileScan
             }
         }
 
+
+        /// <summary>
+        /// Exit button to close application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-
+        /// <summary>
+        /// Builds a bar graph for the community votes.
+        /// </summary>
+        /// <param name="safeCount"></param>
+        /// <param name="maliciousCount"></param>
         public void CommunityVotesChart(long safeCount, long maliciousCount)
         {
             chart1.Series.Clear();
@@ -190,6 +204,7 @@ namespace FileScan
             }
             else
             {
+                //no community votes found. Create default bar chart
                 chart1.Series["Safe"].Points.AddXY("2", safeCount);
                 chart1.Series["Malicious"].Points.Add(0);
                 chart1.Series["Malicious"].Points.AddXY("1", maliciousCount);
@@ -223,7 +238,9 @@ namespace FileScan
         }
 
 
-        // https://stackoverflow.com/questions/1592876/make-a-borderless-form-movable
+        //enable draggable window
+        //Method copied from:
+        //https://stackoverflow.com/questions/1592876/make-a-borderless-form-movable
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;

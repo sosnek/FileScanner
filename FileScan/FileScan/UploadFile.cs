@@ -15,6 +15,11 @@ namespace FileScan
     class UploadFile
     {
         public static bool hasBeenUploaded = false;
+
+        /// <summary>
+        /// Creates a scan request if the file exists in the virusTotal Database
+        /// </summary>
+        /// <returns></returns>
         public static async Task<ScanResults> CreateScanReqAsync()
         {
             ScanResults scanResults = null;
@@ -25,6 +30,7 @@ namespace FileScan
 
                 try
                 {
+                    //deserialize json into object
                     var jsonString = await response.Content.ReadAsStringAsync();
                     scanResults = ScanResults.FromJson(jsonString);
                     return scanResults;
@@ -47,7 +53,10 @@ namespace FileScan
             return scanResults;
         }
 
-
+        /// <summary>
+        /// Uploads the file stream to the virus total API
+        /// </summary>
+        /// <returns></returns>
         public static async Task UploadFileToVTotalAsync()
         {
             var stream = File.OpenRead(FileInfo.FileInfoInstance.File_Path);
