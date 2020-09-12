@@ -1,4 +1,4 @@
-// Filescanner utilizes the virus total API to retrieve virus scan analytics using REST API calls.
+// Filescanner uses the virus total API to retrieve virus scan analytics using REST API calls.
 
 // VirusTotal aggregates many antivirus products and online scan engines to check your file for viruses.
 
