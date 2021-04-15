@@ -9,7 +9,10 @@ If you do not already have one, you can sign up [here](https://www.virustotal.co
 
 ## Usage
 
-Grab your virus total API key by clicking on your profile on the top right of your window.
-Select a file to scan by clicking the file icon next to the first line, or by pasting the file path on the first line. Paste your API key on the line below.
+Grab your virus total API key by logging into virus total and selecting your profile on the top right hand side.
+
+Select a file to scan by clicking the file icon next to the first line, or by pasting the file path on the first line. 
+
+Paste your API key on the line below.
 
 ![Example Outcome](https://github.com/sosnek/FileScanner/blob/master/FileScan/FileScan/FileScanResults.PNG)
